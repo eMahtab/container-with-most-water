@@ -16,7 +16,12 @@ public int maxArea(int[] height) {
 	 return maxArea;
 }
 ```
+Above implementation have runtime complexity of O(n^2) and space complexity of O(1)
 
+```
+Runtime Complexity = O(n^2)
+Space Complexity   = O(1)
+```
 
 ```java
 public int maxArea(int[] height) {
@@ -24,7 +29,8 @@ public int maxArea(int[] height) {
 		int left_pointer = 0;
 		int right_pointer = height.length - 1;
 		while (left_pointer < right_pointer) {
-			int area = Math.min(height[left_pointer], height[right_pointer]) * (right_pointer - left_pointer);
+			int area = Math.min(height[left_pointer], height[right_pointer]) * 
+			                   (right_pointer - left_pointer);
 			maxArea = Math.max(maxArea, area);
 
 			if (height[left_pointer] < height[right_pointer]) {
@@ -36,4 +42,11 @@ public int maxArea(int[] height) {
 	 
    return maxArea;
 }
+```
+
+Above implementation have runtime complexity of O(n) and space complexity of O(1)
+
+```
+Runtime Complexity = O(n)
+Space Complexity   = O(1)
 ```
