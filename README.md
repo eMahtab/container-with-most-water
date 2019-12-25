@@ -1,7 +1,7 @@
 # Container with most water
 
 
-### Implementation
+### Implementation 1 : O(n^2)
 
 ```java
 public int maxArea(int[] height) {
@@ -22,6 +22,8 @@ Above implementation have runtime complexity of O(n^2) and space complexity of O
 Runtime Complexity = O(n^2)
 Space Complexity   = O(1)
 ```
+
+### Implementation 2 : O(n)
 
 ```java
 public int maxArea(int[] height) {
