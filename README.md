@@ -4,16 +4,18 @@
 ### Implementation 1 : O(n^2)
 
 ```java
-public int maxArea(int[] height) {
-    int maxArea = Integer.MIN_VALUE;
-		for (int i = 0; i < height.length - 1; i++) {
-			for (int j = i + 1; j < height.length; j++) {
-				int area = Math.min(height[i], height[j]) * (j - i);
-				maxArea = Math.max(maxArea, area);
-			}
-		}
-    
-	 return maxArea;
+class Solution {
+    public int maxArea(int[] height) {
+        if(height == null || height.length == 0)
+            return 0;
+        int mostWater = Integer.MIN_VALUE;
+        for(int i = 0; i < height.length - 1; i++) {
+            for(int j = i + 1; j < height.length; j++) {
+                mostWater = Math.max(mostWater, Math.min(height[i], height[j]) * (j-i));
+            }
+        }
+        return mostWater;
+    }
 }
 ```
 Above implementation have runtime complexity of O(n^2) and space complexity of O(1)
