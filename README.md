@@ -26,23 +26,25 @@ Space Complexity   = O(1)
 ### Implementation 2 : O(n)
 
 ```java
-public int maxArea(int[] height) {
-		int maxArea = Integer.MIN_VALUE;
-		int left_pointer = 0;
-		int right_pointer = height.length - 1;
-		while (left_pointer < right_pointer) {
-			int area = Math.min(height[left_pointer], height[right_pointer]) * 
-			                   (right_pointer - left_pointer);
-			maxArea = Math.max(maxArea, area);
-
-			if (height[left_pointer] < height[right_pointer]) {
-				left_pointer++;
-			} else {
-				right_pointer--;
-			}
-		}
-	 
-   return maxArea;
+class Solution {
+    public int maxArea(int[] height) {
+        if(height == null || height.length == 0)
+            return 0;
+        int left = 0;
+        int right = height.length - 1;
+        int mostWater = Integer.MIN_VALUE;
+        while(left < right) {
+            int distance = right - left;
+            int waterStored = Math.min(height[left], height[right]) * distance;
+            mostWater = Math.max(mostWater, waterStored);
+            if(height[left] <= height[right]) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+        return mostWater;
+    }
 }
 ```
 
