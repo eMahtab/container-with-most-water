@@ -1,7 +1,8 @@
 # Container with most water
+
 ## https://leetcode.com/problems/container-with-most-water
 
-** This a beautiful question showing, how to use the two pointer approach for better runtime**
+**This a beautiful question showing, how to use the two pointer approach for better runtime**
 
 ### Implementation 1 : O(n^2)
 
