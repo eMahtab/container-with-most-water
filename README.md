@@ -7,6 +7,8 @@ Note: You may not slant the container and n is at least 2.
 
 ![Area with most water](example.jpg?raw=true "Title")
 
+The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.
+
 **This a beautiful question showing, how to use the two pointer approach for better runtime**
 
 ### Implementation 1 : O(n^2)
